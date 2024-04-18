@@ -1,0 +1,21 @@
+//Ejercicio 9 - Comprobar si una secuencia de números contiene 666 en ella
+	Scanner input = new Scanner(System.in);
+        int n;
+        boolean existe = false;
+
+        System.out.print("Introduce un número: ");
+        n = input.nextInt();
+        String nums = String.valueOf(Math.pow(2, n));
+        
+        for (int i = 0; i < nums.length(); i++) {
+            if (nums.charAt(i) == '6' && nums.charAt(i + 1) == '6' && nums.charAt(i + 2) == '6') {
+                existe = true;
+                break;
+            }
+        }
+        
+        if (!existe) {
+            System.out.println(n +" no es un número apocalíptico");
+        } else {
+            System.out.println(n +" es un número apocalíptico");
+        }

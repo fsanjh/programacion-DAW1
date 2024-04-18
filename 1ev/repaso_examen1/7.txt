@@ -1,0 +1,27 @@
+	//Ejercicio 7 - Pedir un num y varias palabras hasta encontrar la palabra "fin", mostrar solo las palabras con una longitud menor a num
+        Scanner input = new Scanner(System.in);
+        int num, cont=0;
+        boolean fin = false;
+        String [] array = new String [255];
+        String palabra;
+        
+        System.out.print("Introduzca un número: ");
+        num = input.nextInt();
+        input.nextLine();
+        
+        do{
+            System.out.print("Introduzca una palabra: ");
+            palabra = input.nextLine();
+            if(palabra.equals("fin")){
+                fin = true;
+            }else{
+                array[cont]=palabra;
+                cont++;
+            }
+        }while(!fin);
+        
+        for(int i = 0; i < cont; i++){
+            if(array[i].length() < num){
+                System.out.print(array[i] +" ");
+            }
+        }

@@ -1,0 +1,9 @@
+//Ejericio 1 - Tiempo dado
+        
+        Scanner input = new Scanner(System.in);
+        int t;
+        System.out.print("Introduzca una cantidad de tiempo en segundos: ");
+        t = input.nextInt();
+        
+        System.out.println("Tiempo: "+ t/3600 +"h:"+ (t%3600)/60 +"min:"+ t%60 +"s");
+        

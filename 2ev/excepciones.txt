@@ -1,0 +1,23 @@
+try{
+            try{
+                System.out.println("a"); //1
+                try{
+                    int[] array = {1, 88, 6};
+                    int resultado = array[3] / 0; //2- Da error de indexOutOfBounds
+                }catch(ArithmeticException er1){
+                    System.out.println("b");
+                }finally{
+                    System.out.println("c");//3- El finally se imprime siempre
+                }
+                System.out.println("d"); //Va directamente al catch que recoja el error dado
+            }catch(ArrayIndexOutOfBoundsException er2){ //4- Salta al error indexOutOfBounds
+                int resultado = 3 / 0; //5- Da error de ArithmeticException
+                System.out.println("e");
+            }catch(ArithmeticException er3){ //Ha dado el error en el catch anterior y al ser este otro catch no entraria, aunque recoge el mismo tipo de error
+                System.out.println("f");
+            }finally{
+                System.out.println("g"); //6- Imprime el finally
+            }
+        }catch(ArithmeticException er4){ //7- Recoge el ArithmeticException dado
+            System.out.println("h");
+        }

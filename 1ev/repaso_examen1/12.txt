@@ -1,0 +1,28 @@
+//Ejercicio 12 - Pide 10 sueldos mensuales, muestra la suma de ellos y cuántos son mayores a 1500
+        /*
+        Scanner input = new Scanner(System.in);
+        int []sueldos = new int [10];
+        int suma = 0;
+        int sueldo;
+        System.out.println("Introduzca 10 sueldos");
+        for(int i = 0; i < sueldos.length; i++){
+            do{
+                System.out.print("Sueldo "+ (i+1) +": ");
+                sueldo = input.nextInt();
+                if (sueldo< 0){
+                    System.out.println("El sueldo no puede ser menor que 0");
+                }else{
+                    sueldos[i] = sueldo;
+                    suma = suma + sueldos[i];
+                }
+            }while(sueldo < 0);
+        }
+        System.out.println("La suma de todos los sueldos es "+ suma +"€");
+        suma = 0;
+        for(int j = 0; j < sueldos.length; j++){
+            if(sueldos[j]> 1500){
+                suma++;
+            }
+        }
+        System.out.println("Sueldos superiores a 1500€: "+ suma);
+        */  

@@ -1,0 +1,5 @@
+# Created at 2024-03-14T20:35:03.975
+Boot Manifest-JAR contains absolute paths in classpath 'E:\juego_wow\WorldOfWarcraft\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

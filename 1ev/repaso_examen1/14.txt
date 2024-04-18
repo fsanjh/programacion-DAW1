@@ -1,0 +1,134 @@
+    //Ejercicio 14 - Máquina de golosinas
+	Scanner input = new Scanner(System.in);     //Escaner para leer al usuario
+	int ventas = 0;                             //Ventas totales que se realizarán
+	int respuesta;                              //Respuesta elegida en el menú
+	int pos;                                    //Posición del producto que escoja el usuario
+	int fila, columna;                          //Fila y columna de los arrays, cambiaran dependiendo de pos
+	int i, j;                                   //Contadores de los bucles for
+	String pass = "";                           //Contraseña para rellenar golosinas
+	//Array de nombres de golosinas
+	String[][] names = {
+			 {"KitKat", 		"Chicles de fresa", 	"Lacasitos", 	"Palotes"},
+			 {"Kinder Bueno", 	"Bolsa variada Haribo", "Chetoos", 	    "Twix"},
+			 {"Kinder Bueno", 	"M&M'S", 		        "Papa Delta", 	"Chicles de menta"},
+			 {"Lacasitos", 		"Crunch", 		        "Milkybar", 	"KitKat"}
+			};
+	//Precios de las golosinas
+	double[][] precio = {
+			 {1.1, 0.8, 1.5, 0.9},
+			 {1.8, 1,   1.2, 1},
+			 {1.8, 1.3, 1.2, 0.8},
+			 {1.5, 1.1, 1.1, 1.1}
+			};
+	//Cantidad de cada golosina
+	int[][] cant = {
+			 {5, 5, 5, 5},
+			 {5, 5, 5, 5},
+			 {5, 5, 5, 5},
+			 {5, 5, 5, 5}
+			};
+	System.out.println("Bienvenido/a");     //Mensaje de bienvenida
+	do {                                    //Bucle que terminará al introducir un 4 en la respuesta
+		do {                                //Bucle que verifica que la respuesta sea 1, 2, 3 o 4
+			//Menú
+			System.out.println("¿Qué acción quiere realizar?[1-4]");
+			System.out.println("	1- Pedir golosina");
+			System.out.println("	2- Mostrar golosinas");
+			System.out.println("	3- Rellenar golosinas");
+			System.out.println("	4- Apagar máquina");
+			System.out.print("Respuesta: ");
+			
+			respuesta = input.nextInt();    //Respuesta del menú
+			//En caso de introducir una respuesta errónea...
+			if(respuesta < 1 || respuesta > 4) {
+				System.out.println("Esa no es una opción válida");
+				System.out.println("---------------------------");
+				
+			}
+		}while(respuesta < 1 || respuesta > 4);
+		//Switch que realizará una opción u otra dependiendo de la respuesta
+		switch(respuesta) {
+			//PEDIR GOLOSINAS
+			case 1:
+				System.out.println("Ha elegido: Pedir golosina");
+				System.out.print("	Posición de la golosina: ");
+				pos = input.nextInt();
+				fila = pos / 10;        //Fila del array (15/10 = 1)
+				columna = pos % 10;     //Columna del array (15%10 = 5)
+				//Si los valores están dentro de los rangos del array...
+				if (fila >= 0 && fila < names.length && columna >= 0 && columna < names[fila].length) {		
+					if(cant[fila][columna] > 0 ) { //Si la cantidad es mayor a 0 se puede continuar con el pedido
+						System.out.println();
+						System.out.println("Usted a pedido "+ names[fila][columna] +" por un precio de "+ precio[fila][columna] +"€");
+						System.out.println("Disfrute de su producto");
+						ventas++;       //Aumento las ventas en 1
+						System.out.println("---------------------------");
+						cant[fila][columna] --;             //Resto la cantidad en esa posición en 1
+					}else if(cant[fila][columna] == 0 ) {   //Si no hay más cantidad de ese producto...
+						System.out.println("No quedan "+ names[fila][columna]);
+						System.out.println("---------------------------");
+					}
+				//Si no están dentro del rango
+				}else{
+					System.out.println("Ese producto no existe");
+					System.out.println("---------------------------");
+				}
+				break;      //Salgo del switch de vuelta al menú
+			//MOSTRAR GOLOSINAS
+			case 2: 
+				System.out.println("Ha elegido: Mostrar golosinas");
+				//Recorro los arrays para mostrarlos
+				for(i = 0; i < names.length; i++) {
+					for(j = 0; j < names.length; j++) {
+						System.out.println("POSICIÓN: "+ i+j +" || NOMBRE: "+ names[i][j] +"= "+ precio[i][j] +"€");
+					}
+				}
+				break;      //Salgo del switch de vuelta al menú
+			//RELLENAR GOLOSINAS
+			case 3: 
+				System.out.println("Ha elegido: Rellenar golosinas");
+				System.out.print("Introduzca la contraseña: ");     //Pido la contraseña
+				input.nextLine(); //Limpio el input
+				pass = input.nextLine();
+				if(pass.equals("MariaMoliner")) {       //Si la contraseña es correcta
+					System.out.println("Contraseña correcta, bienvenido/a");
+					do {        //Bucle para pedir si se quieren rellenar otro producto más o no
+						System.out.println("Cantidad de cada producto:");       //Recorro los arrays y los muestro
+						for(i = 0; i<names.length; i++) {
+							for(j = 0; j<names.length; j++) {
+								System.out.println("POSICIÓN: "+ i+j +"||PRODUCTO: "+ names[i][j] +"= "+ cant[i][j]);
+							}
+						}
+						System.out.print("Posición que quiere rellenar: ");         //Pido una posición
+						pos= input.nextInt();
+						fila = pos / 10;
+						columna = pos % 10;
+						//Si la posición existe se rellena la golosina
+						if (fila >= 0 && fila < names.length && columna >= 0 && columna < names[fila].length) {
+						    if(cant[fila][columna]== 5){ //Si ya hay 5 de ese producto no permite rellenar
+						        System.out.println("No se puede rellenar "+ names[fila][columna] +", ya está al máximo");
+						    }else{
+    							cant[fila][columna]= 5;
+    							System.out.println(names[fila][columna] +" rellenado con éxito");
+						    }
+						}else{      //Si no existe...
+							System.out.println("Ese producto no existe");
+							System.out.println();
+						}
+						System.out.print("¿Quiere rellenar otro?[S/s para continuar, otra cosa para salir]\n-> ");      //Si quiere rellenar otro más vuelve al inicio
+						input.nextLine();
+						pass = input.nextLine();        //Utilizo pass también para usar una única variable
+						pass = pass.toLowerCase();      //La transformo a minúscula
+						System.out.println("---------------------------");
+					}while(pass.equals("s"));
+				}else {         //Contraseña erronea
+					System.out.println("Contraseña errónea, saliendo...");
+					System.out.println("---------------------------");
+				}
+				break;      //Salgo del switch de vuelta al menú
+		    //Finaliza el programa mostrando las ventas
+			case 4: 
+				System.out.println("Gracias por su uso\nVentas realizadas: "+ ventas);
+		}
+	} while(respuesta !=4);
+	input.close();      //Cierro el Scanner input

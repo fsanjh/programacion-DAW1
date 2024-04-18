@@ -1,0 +1,39 @@
+//Procedimiento que muestra información de una cadena
+        
+        Scanner input = new Scanner (System.in);
+        String cadena;
+        System.out.println("Introduzca una frase:");
+        cadena = input.nextLine();
+        infoCadena(cadena);
+        
+
+
+
+public static void infoCadena(String cadena){
+        int longitud = cadena.length();
+        char caracter;
+        int mayus=0, minus=0, nums=0;
+        
+        System.out.println("---------------------------------");
+        cadena = cadena.trim();
+        cadena = cadena.replace(",", "");
+        cadena = cadena.replace(".", "");
+        cadena = cadena.replace(" ","");
+        for (int i = 0; i< cadena.length(); i++){
+            caracter = cadena.charAt(i);
+                if(Character.isUpperCase(caracter)){
+                    mayus++;
+                }else if(Character.isLowerCase(caracter)){
+                    minus++;
+                }else if(Character.isDigit(caracter)){
+                    nums++;
+                }
+                
+            }
+
+        System.out.println("Longitud de la cadena: "+ longitud);
+        System.out.println("Número de mayúsculas: "+ mayus);
+        System.out.println("Número de minúsculas: "+ minus);
+        System.out.println("Número de carácteres numéricos: "+ nums);
+        System.out.println("Otros carácteres: "+ (longitud - mayus - minus - nums));
+    }

@@ -1,0 +1,58 @@
+@options
+@argfile
+-classpath
+'E:/juego_wow/WorldOfWarcraft/target/classes;E:/juego_wow/WorldOfWarcraft/target/test-classes;C:/Users/Nocturno/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.0/junit-jupiter-api-5.6.0.jar;C:/Users/Nocturno/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar;C:/Users/Nocturno/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar;C:/Users/Nocturno/.m2/repository/org/junit/platform/junit-platform-commons/1.6.0/junit-platform-commons-1.6.0.jar;C:/Users/Nocturno/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.6.0/junit-jupiter-params-5.6.0.jar;C:/Users/Nocturno/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.0/junit-jupiter-engine-5.6.0.jar;C:/Users/Nocturno/.m2/repository/org/junit/platform/junit-platform-engine/1.6.0/junit-platform-engine-1.6.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'E:/juego_wow/WorldOfWarcraft/src/test/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/juego_wow/WorldOfWarcraft/target/site/testapidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'WorldOfWarcraft 1.0-SNAPSHOT Test API'
+-use
+-version
+-windowtitle
+'WorldOfWarcraft 1.0-SNAPSHOT Test API'
+'E:/juego_wow/WorldOfWarcraft/src/test/java/testPersonaje.java'
+E:\juego_wow\WorldOfWarcraft\target\classes = 1709756070000
+E:\juego_wow\WorldOfWarcraft\target\test-classes = 1710444824000
+C:\Users\Nocturno\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar = 1579550656000
+C:\Users\Nocturno\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar = 1559848073000
+C:\Users\Nocturno\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar = 1559849067000
+C:\Users\Nocturno\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar = 1579550620000
+C:\Users\Nocturno\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar = 1579550682000
+C:\Users\Nocturno\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar = 1579550704000
+C:\Users\Nocturno\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar = 1579550622000
+E:\juego_wow\WorldOfWarcraft\src\test\java\testPersonaje.java = 1710756944000
+E:\juego_wow\WorldOfWarcraft\src\test\java = 1709756276000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\testPersonaje.html = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\element-list = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\package-summary.html = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\package-tree.html = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\package-use.html = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\overview-tree.html = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\allclasses-index.html = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\allpackages-index.html = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\module-search-index.js = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\package-search-index.js = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\type-search-index.js = 1710786128000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\member-search-index.js = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\tag-search-index.js = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\index-all.html = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\index.html = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\help-doc.html = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\stylesheet.css = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\script.js = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\search.js = 1710786130000
+E:\juego_wow\WorldOfWarcraft\target\site\testapidocs\jquery-ui.overrides.css = 1710786130000

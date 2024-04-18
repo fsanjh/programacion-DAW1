@@ -1,0 +1,48 @@
+        //Ejercicio 6 - Validación de contraseña
+        Scanner input = new Scanner(System.in);
+        String pass;
+        char caracter;
+        boolean mayus, minus, num, especial, correcto;
+        
+        System.out.print("Introduzca una contraseña: ");
+        do {
+            mayus = minus = num = especial = correcto = false;
+            pass = input.nextLine();
+
+            if (pass.length() < 8) {
+                System.out.println("La contraseña debe tener 8 o mas caracteres");
+                
+            }else{
+                for (int i = 0; i < pass.length(); i++) {
+                    caracter = pass.charAt(i);
+                    if (Character.isUpperCase(caracter)) {
+                        mayus = true;
+                    }else if (Character.isLowerCase(caracter)) {
+                        minus = true;
+                    }else if (Character.isDigit(caracter)) {
+                        num = true;
+                    }else if (caracter == '-' || caracter == '_' || caracter == '$') {
+                        especial = true;
+                    }
+                }
+                correcto = mayus && minus && num && especial;
+                if (!mayus) {
+                    System.out.println("La contraseña debe contener al menos 1 mayúscula");
+                }
+                if (!minus) {
+                    System.out.println("La contraseña debe contener al menos 1 minúscula");
+                }
+                if (!num) {
+                    System.out.println("La contraseña debe contener al menos 1 número");
+                }
+                if (!especial) {
+                    System.out.println("La contraseña debe contener al menos 1 caracter especial (-, _ o $)");
+                }
+            }
+            if (!correcto) {
+                    System.out.println();
+                    System.out.print("Vuelva a introducir una contraseña: ");
+                }else {
+                    System.out.println("La contraseña es válida");
+                }
+        } while (!correcto);

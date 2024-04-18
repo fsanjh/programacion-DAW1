@@ -1,0 +1,20 @@
+//Ejercicio 11 - Adivinar número con pistas
+	Scanner input = new Scanner(System.in);
+	int n, cont = 1;
+	int rand = (int) (Math.random()*100+1);
+	System.out.println("Trata de adivinar el número de 1 a 100");
+	do{
+		System.out.print("\nIntento "+ cont +": ");
+		n = input.nextInt();
+		    
+		if(n < rand){
+		        System.out.println("El número que buscas es MAYOR");
+		}else if(n > rand){
+			System.out.println("El número que buscas es MENOR");
+		}
+		cont++;
+		    
+	}while(n != rand);
+        
+	System.out.println("\n¡¡Enhorabuena, acertaste el número!!");
+		

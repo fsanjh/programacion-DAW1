@@ -1,0 +1,67 @@
+//Ejercicio 13 - Facturas con código, cantidad y precio/litro
+        Scanner input = new Scanner(System.in);
+        int n;
+        double precLit;
+        
+        System.out.print("Cuántas facturas va a introducir: ");
+        n = input.nextInt();
+        Object [][] facturas = new Object [n][3];
+        
+        for(int i = 0; i < facturas.length; i++){
+            System.out.println("Factura "+ (i+1));
+            do{
+                System.out.print("  Código del artículo: ");
+                n = input.nextInt();
+                if(n < 0){
+                    System.out.println("ERROR: código no válido");
+                }else{
+                    facturas[i][0] = n;
+                }
+                
+            }while(n < 0);
+            
+            do{
+                System.out.print("  Cantidad vendida en litros: ");
+                precLit = input.nextDouble();
+                if(precLit < 0){
+                    System.out.println("ERROR: litros no válidos");
+                }else{
+                    facturas[i][1] = precLit;
+                }
+            }while(precLit < 0);
+            
+            do{
+                System.out.print("  Precio por litro: ");
+                precLit = input.nextDouble();
+                if(precLit < 0){
+                    System.out.println("ERROR: precio no válido");
+                }else{
+                    facturas[i][2] = precLit;
+                }
+            }while(precLit < 0);
+        }
+        precLit = 0;
+        System.out.println("---------------------------------------");
+        System.out.print("Facturación total: ");
+        for(int j = 0; j < facturas.length; j++){
+            precLit = precLit + ((double) facturas[j][1] * (double) facturas[j][2]);
+        }
+        System.out.print(precLit +"€");
+        
+        precLit = 0;
+        System.out.print("\nLitros vendidos del artículo con el código 1: ");
+        for(int k = 0; k < facturas.length; k++){
+            if ((int) facturas[k][0] == 1){
+                precLit = precLit + (double) facturas[k][1];
+            }
+        }
+        System.out.print(precLit +" Litros");
+        
+        precLit = 0;
+        System.out.print("\nFacturas mayores a 600€: ");
+        for(int k = 0; k < facturas.length; k++){
+            if (((double) facturas[k][1] * (double) facturas[k][2]) > 600){
+                precLit++;
+            }
+        }
+        System.out.print((int) precLit);

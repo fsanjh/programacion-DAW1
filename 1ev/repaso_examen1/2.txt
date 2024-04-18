@@ -1,0 +1,41 @@
+//Ejercicio 2 - Número mayor entre 3 con confirmación de salida
+        
+        Scanner input = new Scanner (System.in);
+        double num1, num2, num3;
+        char continuar;
+        do{
+            System.out.println("Bienvenido, introduzca tres números, pueden contener decimales separados con un punto \nSe redondearan a hacia arriba (3.2 = 4) ");
+            System.out.print("Número 1: ");
+            num1 = input.nextDouble();
+            num1 = Math.ceil(num1);
+            System.out.println("Valor redondeado= "+ num1);
+            System.out.print("Número 2: ");
+            num2 = input.nextDouble();
+            num2 = Math.ceil(num2);
+            System.out.println("Valor redondeado= "+ num2);
+            System.out.print("Número 3: ");
+            num3 = input.nextDouble();
+            num3 = Math.ceil(num3);
+            System.out.println("Valor redondeado= "+ num3);
+            System.out.println();
+            
+            if(num1 > num2 && num1 > num3){
+                System.out.println("El mayor de los tres números es "+ num1);
+            }else if(num2 > num1 && num2 > num3){
+                System.out.println("El mayor de los tres números es "+ num2);
+                
+            }else{
+                System.out.println("El mayor de los tres números es "+ num3);
+                
+            }
+            do{
+                System.out.print("¿Quiere continuar usando el programa?[S/n]");
+                continuar = input.next().charAt(0);
+                continuar = Character.toLowerCase(continuar);
+                if (continuar != 's' && continuar != 'n'){
+                    System.out.print("Respuesta inválida, pruebre otra vez ");
+                }
+            }while(continuar != 's' && continuar != 'n');
+            System.out.println("------------------------------------------------");
+        }while(continuar == 's');
+        System.out.println("\nGracias por usar el programa");

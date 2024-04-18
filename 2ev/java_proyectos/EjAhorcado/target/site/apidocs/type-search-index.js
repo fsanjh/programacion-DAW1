@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"com.mycompany.ejahorcado","l":"Ahorcado"},{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.mycompany.ejahorcado","l":"EjAhorcado"}];updateSearchResults();

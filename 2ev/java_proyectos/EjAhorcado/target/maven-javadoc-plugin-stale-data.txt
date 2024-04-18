@@ -1,0 +1,42 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/Nocturno/Desktop/Félix/NetBeansProjects/EjAhorcado/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Nocturno/Desktop/Félix/NetBeansProjects/EjAhorcado/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'EjAhorcado 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'EjAhorcado 1.0-SNAPSHOT API'
+com.mycompany.ejahorcado
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\src\main\java = 1708099944929
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\allclasses-index.html = 1708627429043
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\allpackages-index.html = 1708627429047
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\element-list = 1708627428967
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\help-doc.html = 1708627429087
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\index-all.html = 1708627429076
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\index.html = 1708627429079
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\jquery-ui.overrides.css = 1708627429114
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\member-search-index.js = 1708627429057
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\module-search-index.js = 1708627429050
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\overview-tree.html = 1708627429021
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\package-search-index.js = 1708627429052
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\script.js = 1708627429093
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\search.js = 1708627429097
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\stylesheet.css = 1708627429091
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\tag-search-index.js = 1708627429057
+C:\Users\Nocturno\Desktop\Félix\NetBeansProjects\EjAhorcado\target\site\apidocs\type-search-index.js = 1708627429054

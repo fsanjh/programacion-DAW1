@@ -1,0 +1,17 @@
+        //Ejercicio 5 - Generador letras mayúsculas aleatorias
+        
+        Scanner input =  new Scanner(System.in);
+        int cant;
+        int random = 0;
+        char asciiChar;
+        
+        System.out.print("Cúantos carácteres quiere generar: ");
+        cant = input.nextInt();
+        System.out.println();
+        for(int i = 0; i < cant; i++){
+            random = (int) (Math.random()*(90-65+1)+65);
+            asciiChar = (char) random;
+            System.out.print(asciiChar +" ");
+        }
+        
+        
