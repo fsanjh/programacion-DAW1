@@ -17,7 +17,7 @@ public class EjercicioLeerFicheros1{
         try{
             FileWriter fw = new FileWriter(path);
             PrintWriter pw = new PrintWriter(fw);
-            pw.println("Llegaron los autistas bebé EA EA EA");
+            pw.println("EA eae aea sadawe");
             pw.close();
             fw.close();
             
