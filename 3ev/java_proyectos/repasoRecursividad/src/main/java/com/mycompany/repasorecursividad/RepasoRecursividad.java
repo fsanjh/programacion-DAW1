@@ -58,6 +58,7 @@ public class RepasoRecursividad{
     }
 
     public static ArrayList<Integer> capturarNumeros(ArrayList<Integer> lista){
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         System.out.print("Introduce un número: ");
         int numero = input.nextInt();

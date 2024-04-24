@@ -7,6 +7,7 @@ package com.mycompany.ligoleyen;
  */
 public class Mid extends Campeon{
     private String tipo;
+    @SuppressWarnings("unused")
     private String tipoJuego;
 
     public Mid(String nombre, String recurso, String combate, String tipo, String tipoJuego) {

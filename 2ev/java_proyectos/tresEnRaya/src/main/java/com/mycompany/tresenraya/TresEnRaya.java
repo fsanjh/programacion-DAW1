@@ -23,6 +23,7 @@ public class TresEnRaya {
     }
     //FUNCION QUE REALIZA LOS TURNOS
     public static char[][] turno(char[][] tablero, boolean turno){
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         int fila;
         int col;

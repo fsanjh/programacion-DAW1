@@ -71,6 +71,7 @@ public class Proyecto3 {
         */
         
         
+        @SuppressWarnings("resource")
         Scanner input = new Scanner (System.in);
         int num1, num2, sum1, sum2;
         sum1 = sum2 = 0;

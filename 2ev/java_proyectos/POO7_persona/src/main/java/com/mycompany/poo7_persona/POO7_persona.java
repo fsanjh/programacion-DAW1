@@ -24,6 +24,7 @@ public class POO7_persona {
         System.out.println(persona4.toString());
         */
         
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         String nombre;
         int edad;

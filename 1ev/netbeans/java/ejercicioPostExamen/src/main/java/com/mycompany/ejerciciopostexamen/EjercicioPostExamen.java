@@ -138,6 +138,7 @@ public class EjercicioPostExamen {
         }
         */
         
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         final int MIN = 0;
         final int MAX = 10;

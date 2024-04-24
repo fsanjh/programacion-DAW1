@@ -29,6 +29,7 @@ public class EjParking {
         System.out.println(p1.toString());
         */
         
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         String res;
         Parking park = new Parking("Parking Centro", 50);

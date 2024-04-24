@@ -33,7 +33,7 @@ public class Mercadona {
         System.out.println(v1);
         
         System.out.println("---------------------------------------");
-        ArrayList<Producto> lista = new ArrayList();
+        ArrayList<Producto> lista = new ArrayList<Producto>();
         lista.add(d1);
         lista.add(c1);
         lista.add(v1);

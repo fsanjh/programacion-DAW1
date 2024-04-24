@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class ArraysDinamicos {
 
     public static void main(String[] args) {
+        @SuppressWarnings({ "rawtypes", "unchecked" })
         ArrayList<String> lista = new ArrayList();
         
         for(int i = 0; i < 25; i++){
@@ -28,6 +29,7 @@ public class ArraysDinamicos {
         tamanoArray = lista.size();
         System.out.println("Nuevo tamaño del array: "+tamanoArray);
         
+        @SuppressWarnings({ "rawtypes", "unchecked" })
         ArrayList<String> lista2 = new ArrayList();
         lista2.add("C");
         lista.removeAll(lista2);

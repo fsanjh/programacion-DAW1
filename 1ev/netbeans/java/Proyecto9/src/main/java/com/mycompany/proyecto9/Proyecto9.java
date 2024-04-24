@@ -4,7 +4,6 @@
 
 package com.mycompany.proyecto9;
 
-import java.util.Scanner;
 
 /**
  *

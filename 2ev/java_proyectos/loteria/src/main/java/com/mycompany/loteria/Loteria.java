@@ -72,6 +72,7 @@ public class Loteria {
     }
     
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in); //Declaro el escaner
         int [] loteria = new int [6]; //Array de los numeros de la primitiva
         int [] lotUser = new int [6]; //Array de los numeros del usuario

@@ -24,6 +24,7 @@ public class Ejercicio2_felix{
     }
 
     public static void main(String[] args){
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in); //Declaro el escaner para que el usuario pueda interactuar con el programa
         int res; //Respuestas dadas por el usuario
         int partidos = 0; //Partidos que hay introducidos

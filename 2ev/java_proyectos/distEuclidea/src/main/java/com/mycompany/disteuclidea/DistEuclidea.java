@@ -22,6 +22,7 @@ public class DistEuclidea {
     }
     
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         double [][] posiciones = new double [2][2]; //Array para las posiciones X1, Y1 || X2, Y2
         double num = 0;

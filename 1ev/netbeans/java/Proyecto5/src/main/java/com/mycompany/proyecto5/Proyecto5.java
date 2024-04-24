@@ -67,23 +67,21 @@ public class Proyecto5 {
         System.out.print(cadena.toUpperCase());
         */
         //Indicar cifras numero entero
+        @SuppressWarnings("resource")
         Scanner input=new Scanner(System.in);
         int num;
         String numString;
         System.out.println("Introduce una frase");
         num = input.nextInt();
         numString = String.valueOf(num);
-       /* for(int i = 0; i< numString.length() ; i++){
+        for(int i = 0; i< numString.length() ; i++){
             if (numString.length() == 1){
                 System.out.println("Hay una cifra");
                 break;
             }else if(numString.length() == 1){
             
-            }
-            */
-           switch (n){
-           
-           }
+        }
+            
             
             
             
@@ -98,4 +96,4 @@ public class Proyecto5 {
         
         
     }
-}
+

@@ -10,6 +10,7 @@ package com.mycompany.poo11_producto;
  */
 public class POO11_producto {
 
+    @SuppressWarnings("static-access")
     public static void main(String[] args) {
         // creando 2 productos
         Producto p1 = new Producto(10);

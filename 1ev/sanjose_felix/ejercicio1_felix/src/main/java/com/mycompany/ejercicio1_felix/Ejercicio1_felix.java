@@ -42,6 +42,7 @@ public class Ejercicio1_felix {
     }
     
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in); //Declaro el Scanner input para leer los datos introducidos por el usuario
         int a, b, c; //Variables a las que se le asignaran los numeros del usuario
         

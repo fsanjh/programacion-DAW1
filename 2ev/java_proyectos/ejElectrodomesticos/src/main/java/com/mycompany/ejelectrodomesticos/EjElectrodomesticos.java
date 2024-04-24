@@ -39,7 +39,7 @@ public class EjElectrodomesticos {
         System.out.println(l3.getCosteConsumo(2, 12.80));
         
         System.out.println("=================================================");
-        ArrayList<Electrodomestico> lista = new ArrayList();
+        ArrayList<Electrodomestico> lista = new ArrayList<Electrodomestico>();
         Electrodomestico e2 = new Electrodomestico("Horno", "Bosch", 1000);
         lista.add(e2);
         Electrodomestico e3 = new Electrodomestico("Lavadora", "Malay", 1300);

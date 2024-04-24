@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class EjercicioProductos {
       public static ArrayList<Producto> QuitarCongelados(ArrayList<Producto> listaProd, ArrayList<Congelado> listaCong){
-        ArrayList<Producto> listaEliminar = new ArrayList();
+        ArrayList<Producto> listaEliminar = new ArrayList<Producto>();
         System.out.println("----------------------------------------------------------------------");
         System.out.println("ELIMINA LOS CONGELADOS:");
         for(Producto list : listaProd){
@@ -23,7 +23,7 @@ public class EjercicioProductos {
     }
     
     public static ArrayList<Producto> prodsFrancia(ArrayList<Fresco> listaFres){
-        ArrayList<Producto> listaProdFR = new ArrayList();
+        ArrayList<Producto> listaProdFR = new ArrayList<Producto>();
         for(Fresco list : listaFres){
             if(list.getPais() == "Francia"){
                 listaProdFR.add(list);
@@ -106,7 +106,7 @@ public class EjercicioProductos {
         }
     */
        
-       ArrayList<Congelado> listaCong = new ArrayList();
+       ArrayList<Congelado> listaCong = new ArrayList<Congelado>();
        Congelado cong1 = new Congelado("pescado","29/01/2024", 43310, -5);
        listaCong.add(cong1);
        Congelado cong2 = new Congelado("coliflor","09/10/2027", 8975, -18);
@@ -116,7 +116,7 @@ public class EjercicioProductos {
        Congelado cong4 = new Congelado("helado","25/04/2024", 313, -15);
        listaCong.add(cong4);
 
-       ArrayList<Fresco> listaFres = new ArrayList();
+       ArrayList<Fresco> listaFres = new ArrayList<Fresco>();
        Fresco fres1 = new Fresco("tomates","03/04/2024", 777, "29/01/2024", "Francia");
        listaFres.add(fres1);
        Fresco fres2 = new Fresco("patatas","26/08/2026", 333, "20/01/2024", "España");
@@ -126,7 +126,7 @@ public class EjercicioProductos {
        Fresco fres4 = new Fresco("naranjas","01/01/2044", 909899, "09/01/2023", "Portugal");
        listaFres.add(fres4);
        
-       ArrayList<Producto> listaProd = new ArrayList();
+       ArrayList<Producto> listaProd = new ArrayList<Producto>();
        Producto prod1 = new Producto(cong1.getNombre(), cong1.getFechaCaducidad(), cong1.getNumLote());
        listaProd.add(prod1);
        Producto prod2 = new Producto(cong2.getNombre(), cong2.getFechaCaducidad(), cong2.getNumLote());

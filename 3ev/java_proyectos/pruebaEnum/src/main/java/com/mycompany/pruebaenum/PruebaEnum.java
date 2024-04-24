@@ -52,6 +52,7 @@ public class PruebaEnum{
         
         System.out.println("-------------------------------");
         
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         int res;
 

@@ -69,6 +69,7 @@ public class Triangulo{
     }
 
     public void establecerRotacion(int estado){
+        @SuppressWarnings("unused")
         int vueltas = 0;
         Math.abs(estado);
         while(estado > 4){

@@ -12,6 +12,7 @@ public class Coche {
     private String marca;
     private int caballos;
     private double velocidad;
+    @SuppressWarnings("unused")
     private boolean fallo = false;
     
     public Coche(String matricula, String color, String marca, int caballos) {
@@ -85,6 +86,7 @@ public class Coche {
     
     public void conducir(double velocidadInicial){
         boolean fin = false;
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         String res;
         this.velocidad = velocidadInicial;

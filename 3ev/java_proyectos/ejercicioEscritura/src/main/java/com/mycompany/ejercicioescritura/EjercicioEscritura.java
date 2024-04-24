@@ -43,6 +43,7 @@ public class EjercicioEscritura {
     }
 
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         String nombre;
         String cadena;

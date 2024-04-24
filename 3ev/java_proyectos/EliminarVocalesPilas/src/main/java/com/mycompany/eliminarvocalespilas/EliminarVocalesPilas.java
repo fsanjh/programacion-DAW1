@@ -11,8 +11,9 @@ import java.util.Stack;
 public class EliminarVocalesPilas {
 
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
-        Stack<Character> pilaCadena = new Stack();
+        Stack<Character> pilaCadena = new Stack<Character>();
         String cadena;
         
         System.out.print("Introduce una cadena: ");

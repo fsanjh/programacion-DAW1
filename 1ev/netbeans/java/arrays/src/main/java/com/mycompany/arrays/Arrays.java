@@ -89,7 +89,8 @@ public class Arrays {
             }
                 */
 
-	    Scanner input = new Scanner(System.in);
+	    @SuppressWarnings("resource")
+        Scanner input = new Scanner(System.in);
 	    double media1 = 0, media2 = 0, media3 = 0;
         double nota=0.0;
 	    int num=0, numAlumnos=0;

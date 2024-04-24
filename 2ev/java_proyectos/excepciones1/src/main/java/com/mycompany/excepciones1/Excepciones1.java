@@ -26,6 +26,7 @@ public class Excepciones1 {
             }
         }while(num != 1234);
         */
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         int numerador = 0;
         int denominador = 0;
