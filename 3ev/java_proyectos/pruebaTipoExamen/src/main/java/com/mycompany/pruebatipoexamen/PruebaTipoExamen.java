@@ -28,7 +28,7 @@ public class PruebaTipoExamen{
 
     public static boolean encontrarFichero(String[] arrayFicheros, String nombre){
         boolean encontrado = false;
-        for(int i = 0; i < (arrayFicheros.length - 1); i ++){
+        for(int i = 0; i < (arrayFicheros.length); i ++){
             if(arrayFicheros[i].equals(nombre + ".txt")){
                 encontrado = true;
                 break;
@@ -128,7 +128,7 @@ public class PruebaTipoExamen{
                                 BufferedReader br = new BufferedReader(fr);
                                 String i;
                                 int suma = 0;
-                                System.out.println("Suma de los números " + nombre + ".txt= ");
+                                System.out.print("Suma de los números de" + nombre + ".txt= ");
                                 while((i = br.readLine()) != null){
                                     suma += Integer.parseInt(i);
                                 }
