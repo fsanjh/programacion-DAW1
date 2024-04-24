@@ -45,6 +45,8 @@ public class LeerQuijote{
                     palabra = ""; //limpio la palabra para volver a buscar
                 }
             }
+            br.close();
+            fr.close();
             //Muestro pot pantalla la cantidad
             System.out.println("Dulcinea: "+ contDulcinea); 
             System.out.println("Quijote: "+ contQuijote);
