@@ -27,6 +27,7 @@ public class EscrituraFicheros1 {
             archivo1.write(CR);
             archivo1.write((byte)'o');
             archivo1.write((byte)'s');
+            archivo1.close();
         }catch(IOException io1){
             System.err.println("No se encontró el fichero");
         }
@@ -57,6 +58,7 @@ public class EscrituraFicheros1 {
             data.writeUTF(texto);
             int num = 7;
             data.write(num);
+            data.close();
         }catch(IOException io1){
             System.err.println("No se encontró el fichero");
         }

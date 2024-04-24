@@ -78,7 +78,8 @@ while (cont<repeticiones){
         
      */
      
-     Scanner input = new Scanner (System.in);
+     @SuppressWarnings("resource")
+    Scanner input = new Scanner (System.in);
      System.out.println("Cuantos numeros de la sucesion de fibonacci quieres ver?"); 
     // int cont, numpr; cont = numpr = 0;
     //  int numseg=1; int numtre;

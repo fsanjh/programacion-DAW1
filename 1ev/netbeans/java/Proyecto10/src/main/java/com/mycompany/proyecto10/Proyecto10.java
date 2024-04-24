@@ -36,6 +36,7 @@ public class Proyecto10 {
         
         System.out.println("En la frase \""+ frase +"\" hay "+ contarPalabras(frase) +" palabra/s");*/
         
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         String frase, frase2;
         frase2 = "";

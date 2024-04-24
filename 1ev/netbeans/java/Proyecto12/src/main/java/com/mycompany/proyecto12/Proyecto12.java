@@ -68,6 +68,7 @@ public class Proyecto12 {
         */
 
 
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         //int [] arrayA , arrayB , arrayC;     //Declaro los tres arrays con sus tamaños
         int num, cont, contA = 0, contB = 0;    //num= numero que introduce el usuario, contA y contB= indices de los arrays A y B

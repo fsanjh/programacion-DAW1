@@ -13,8 +13,9 @@ import java.util.Stack;
 public class PalabraInvertidaPilas {
 
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
-        Stack<Character> pilaPalabra = new Stack();
+        Stack<Character> pilaPalabra = new Stack<Character>();
         Queue <Character> colaPalabra = new LinkedList<>();
         String palabra;
         

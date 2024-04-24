@@ -4,7 +4,6 @@
 
 package com.mycompany.poo2_circulo;
 
-import java.util.Scanner;
 
 /**
  *

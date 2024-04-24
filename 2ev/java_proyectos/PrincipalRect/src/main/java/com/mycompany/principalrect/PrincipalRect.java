@@ -47,6 +47,7 @@ public class PrincipalRect{
         r3.calcularArea();
         */
 
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         int lado, base;
         try{

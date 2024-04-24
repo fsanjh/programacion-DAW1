@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class EjExcepcionesEcuacion2grado{
 
     public static void main(String[] args){
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         double a, b, c;
         char res = ' ';

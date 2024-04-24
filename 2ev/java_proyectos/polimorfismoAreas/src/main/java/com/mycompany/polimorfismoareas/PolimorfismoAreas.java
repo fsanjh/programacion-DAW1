@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class PolimorfismoAreas {
 
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         int res = 0;
         

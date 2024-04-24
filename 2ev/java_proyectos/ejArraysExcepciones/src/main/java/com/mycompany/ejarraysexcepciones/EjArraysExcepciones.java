@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class EjArraysExcepciones{
 
     public static void main(String[] args){
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         int res = 0;
         boolean error;

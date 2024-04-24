@@ -53,6 +53,7 @@ public class Proyecto11 {
         
         //13 cerillas
         Random random = new Random();
+        @SuppressWarnings("resource")
         Scanner input = new Scanner (System.in);
         int num, cerillas = 13;
         boolean ganar=false;

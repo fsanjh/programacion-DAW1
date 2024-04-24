@@ -110,6 +110,7 @@ public class Mavenproject1 {
         */
     /*-----------------------------------------------------------------------------*/    
         //Area de un sector circular
+        @SuppressWarnings("resource")
         Scanner input = new Scanner (System.in);
         double r, g;
         

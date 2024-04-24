@@ -112,7 +112,7 @@ public class Coleccion {
     
     
     /*Con ArrayList*/
-    private ArrayList<Figura> listaFiguras2 = new ArrayList();
+    private ArrayList<Figura> listaFiguras2 = new ArrayList<Figura>();
 
     public ArrayList<Figura> getListaFiguras2() {
         return listaFiguras2;

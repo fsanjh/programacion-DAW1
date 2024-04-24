@@ -39,6 +39,7 @@ public class ListaProfesores{
             nomina += p.nomina();
         } */
         
+        @SuppressWarnings("unused")
         Iterator<Profesor> it = lista.iterator();
         
         return nomina;

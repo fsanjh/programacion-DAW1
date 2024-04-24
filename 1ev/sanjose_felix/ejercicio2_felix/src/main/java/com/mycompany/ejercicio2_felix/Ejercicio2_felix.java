@@ -14,6 +14,7 @@ import java.util.Scanner; //importo el Scanner
 
 public class Ejercicio2_felix {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in); //Declaro el escaner
         Random rnd = new Random(); //Declaro el randomiador
         final int intentos = 7; //Numero de intentos

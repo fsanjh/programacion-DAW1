@@ -9,6 +9,7 @@ import java.util.Scanner;
 public class TrabajandoConEnumerados {
 
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         char res;
         Mazo mazo = new Mazo();

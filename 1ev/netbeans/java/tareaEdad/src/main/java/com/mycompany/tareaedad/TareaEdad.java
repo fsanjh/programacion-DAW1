@@ -10,6 +10,7 @@ import java.util.Scanner;
  */
 public class TareaEdad {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
         Scanner input = new Scanner (System.in); //Declaro el escaner
         int dia1, dia2, mes1, mes2, ano1, ano2; //Declaro variables
         //Inicializo variables

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class DiasLluviosos{
     private int dia;
     private boolean lluvia;
-    private ArrayList<DiasLluviosos> dias = new ArrayList();
+    private ArrayList<DiasLluviosos> dias = new ArrayList<DiasLluviosos>();
     
     public DiasLluviosos(){}
     

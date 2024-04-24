@@ -30,6 +30,7 @@ public class Palabras {
         System.out.println("Texto reemplazado "+textReemplazado);
         */
         
+        @SuppressWarnings("resource")
         Scanner input = new Scanner (System.in);
         String palabra;
         String palabra2 = "";

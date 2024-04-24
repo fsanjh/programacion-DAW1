@@ -55,6 +55,7 @@ public class Password{
     }
 
     public boolean modificaContrasenya(){ //Modifica la contraseña actual del usuario
+        @SuppressWarnings("resource")
         Scanner input = new Scanner(System.in);
         boolean correcto;
 
