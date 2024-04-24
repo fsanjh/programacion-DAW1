@@ -176,6 +176,6 @@ public class PruebaTipoExamen{
                 input.next();
             }
         }while(nums != 6);
-
+        input.close();
     }
 }
