@@ -60,7 +60,7 @@ public class PruebaTipoExamen{
                         if(encontrarFichero(fichero.list(), nombre)){ //Si el fichero ya existe
                             System.out.println("El fichero ya existe en el directorio, ¿quiere sobreescribirlo?");
                             System.out.println("    1. Sí");
-                            System.out.println("    2+. No");
+                            System.out.println("    2 o +. No");
                             System.out.print("Respuesta: ");
                             nums = input.nextInt();
                             if(nums != 1){
@@ -149,7 +149,7 @@ public class PruebaTipoExamen{
                             System.out.println("Fichero encontrado");
                             System.out.println("¿Está seguro de que quiere eliminar el fichero " + nombre + ".txt ? ");
                             System.out.println("    1. Sí");
-                            System.out.println("    2+. No");
+                            System.out.println("    2 o +. No");
                             System.out.print("Respuesta: ");
                             nums = input.nextInt();
                             if(nums == 1){
