@@ -114,6 +114,7 @@ public class PruebaBDs1{
                                         }
                                         cadena = input.next() + input.nextLine();
                                         stmt.executeUpdate("UPDATE tienda.producto SET " + campo + "  = '" + cadena + "' WHERE id = '" + result.getString(1) + "';");
+                                        System.out.println("Los cambios se mostrarán al final la modificación");
                                     }else if(nums == 5){
                                         System.out.println("Fin de la modificación");
                                     }else{
