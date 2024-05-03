@@ -22,7 +22,6 @@ public class PruebaBDs1{
         System.out.println("    4- Elimnar un producto");
         System.out.println("    5- Salir");
         System.out.print("Respuesta: ");
-
     }
 
     public static void main(String[] args){
