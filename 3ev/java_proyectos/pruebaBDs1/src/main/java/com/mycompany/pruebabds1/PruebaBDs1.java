@@ -14,50 +14,19 @@ import java.util.Scanner;
  */
 public class PruebaBDs1{
 
+    public static void menu(){
+        System.out.println("Bienvenido a la tabla Producto de la BD Tienda");
+        System.out.println("    1- Mostrar la tabla");
+        System.out.println("    2- Insertar un producto");
+        System.out.println("    3- Modificar un producto");
+        System.out.println("    4- Elimnar un producto");
+        System.out.println("    5- Salir");
+        System.out.print("Respuesta: ");
+
+    }
+
     public static void main(String[] args){
         try{
-            /*
-            String url = "jdbc:mariadb://localhost:3307/tienda";
-            Connection conn = DriverManager.getConnection(url, "root", "root");
-            Statement stmt = (Statement) conn.createStatement();
-            String select1 = "SELECT * FROM producto WHERE pais = 'Espana';";
-            String query1 = "INSERT INTO tienda.producto VALUES ('01', 'Cochinillo', 'Tipico de Segovia', '45', 'Espana');";
-            String query2 = "INSERT INTO tienda.producto VALUES ('02', 'Torreznos', 'Sanísimos', '15', 'Espana');";
-            String query3 = "INSERT INTO tienda.producto VALUES ('03', 'Calamar', 'Calamardo', '10', 'Portugal');";
-            int filasInsertadas = 0;
-            //filasInsertadas = stmt.executeUpdate(query1);
-            //filasInsertadas = stmt.executeUpdate(query2);
-            //filasInsertadas = stmt.executeUpdate(query3);
-            System.out.println("\nFilas insertadas: " + filasInsertadas);
-
-            ResultSet result = stmt.executeQuery(select1);
-            System.out.println("\nListado productos españoles: ");
-            while(result.next()){
-                System.out.println("-Producto: " + result.getString("nombre"));
-            }
-            String query4 = "UPDATE tienda.producto SET nombre = 'Ponche Segoviano' WHERE nombre = 'Cochinillo';";
-            int filasActualizadas = 0;
-            filasActualizadas = stmt.executeUpdate(query4);
-            System.out.println("\nFilas actualizadas: " + filasActualizadas);
-            String select2 = "SELECT * FROM tienda.producto;";
-            result = stmt.executeQuery(select2);
-            System.out.println("Listado cambiado: ");
-            while(result.next()){
-                System.out.println("-Producto: " + result.getString("nombre"));
-            }
-            String query5 = "DELETE FROM tienda.producto WHERE pais = 'Portugal';";
-            int filasEliminadas = 0;
-            filasEliminadas = stmt.executeUpdate(query5);
-            System.out.println("\nFilas eliminadas: " + filasEliminadas);
-            result = stmt.executeQuery(select2);
-            System.out.println("Listado cambiado: ");
-            while(result.next()){
-                System.out.println("-Producto: " + result.getString("nombre"));
-            }
-             */
-            
-            
-            
             String url = "jdbc:mariadb://localhost:3307/tienda";
             Connection conn = DriverManager.getConnection(url, "root", "root");
             Statement stmt = (Statement) conn.createStatement();
@@ -65,15 +34,9 @@ public class PruebaBDs1{
             Scanner input = new Scanner(System.in);
             int nums;
             String cadena;
-                do{
-                    try{
-                    System.out.println("Bienvenido a la tabla Producto de la BD Tienda");
-                    System.out.println("    1- Mostrar la tabla");
-                    System.out.println("    2- Insertar un producto");
-                    System.out.println("    3- Modificar un producto");
-                    System.out.println("    4- Elimnar un producto");
-                    System.out.println("    5- Salir");
-                    System.out.print("Respuesta: ");
+            do{
+                try{
+                    menu();
                     nums = input.nextInt();
                     switch(nums){
                         case 1 -> {
@@ -87,13 +50,13 @@ public class PruebaBDs1{
                         case 2 -> {
                             String query = "INSERT INTO tienda.producto VALUES(";
                             result = stmt.executeQuery("SELECT * FROM tienda.producto;");
-                            int id = 01;
+                            int id = 1;
                             while(result.next()){
                                 if(Integer.parseInt(result.getString(1)) == id){
                                     id ++;
                                 }
                             }
-                            query += "'0" + id + "', ";
+                            query += "'" + id + "', ";
 
                             System.out.print("Introduzca un nombre: ");
                             cadena = input.next() + input.nextLine();
@@ -129,33 +92,30 @@ public class PruebaBDs1{
                                     System.out.print("Respuesta: ");
                                     nums = input.nextInt();
 
-                                    if(nums <= 5){
+                                    if(nums > 0 && nums < 5){
+                                        String campo = "";
                                         switch(nums){
                                             case 1 -> {
+                                                campo = "nombre";
                                                 System.out.print("Nuevo nombre: ");
-                                                cadena = input.next() + input.nextLine();
-                                                stmt.executeUpdate("UPDATE tienda.producto SET nombre = '" + cadena + "' WHERE id = '" + result.getString(1) + "';");
                                             }
                                             case 2 -> {
+                                                campo = "descripcion";
                                                 System.out.print("Nueva descripción: ");
-                                                cadena = input.next() + input.nextLine();
-                                                stmt.executeUpdate("UPDATE tienda.producto SET nombre = '" + cadena + "' WHERE id = '" + result.getString(1) + "';");
                                             }
                                             case 3 -> {
+                                                campo = "precio";
                                                 System.out.print("Nuevo precio: ");
-                                                cadena = input.next() + input.nextLine();
-                                                stmt.executeUpdate("UPDATE tienda.producto SET nombre = '" + cadena + "' WHERE id = '" + result.getString(1) + "';");
                                             }
                                             case 4 -> {
+                                                campo = "pais";
                                                 System.out.print("Nuevo pais: ");
-                                                cadena = input.next() + input.nextLine();
-                                                stmt.executeUpdate("UPDATE tienda.producto SET nombre = '" + cadena + "' WHERE id = '" + result.getString(1) + "';");
-                                            }
-                                            case 5 -> {
-                                                System.out.println("Fin de la modificación de producto");
                                             }
                                         }
-
+                                        cadena = input.next() + input.nextLine();
+                                        stmt.executeUpdate("UPDATE tienda.producto SET " + campo + "  = '" + cadena + "' WHERE id = '" + result.getString(1) + "';");
+                                    }else if(nums == 5){
+                                        System.out.println("Fin de la modificación");
                                     }else{
                                         System.out.println("Valor introducido no permitido");
                                     }
@@ -183,18 +143,17 @@ public class PruebaBDs1{
                             System.out.println("Introduzca un valor válido");
                         }
                     }
-                    
-                    }catch(InputMismatchException ime1){
-                        System.out.println("ERROR - Tipo de dato no válido");
-                        nums = 0;
-                        input.next();
-                    }
-                }while(nums != 5);
+
+                }catch(InputMismatchException ime1){
+                    System.out.println("ERROR - Tipo de dato no válido");
+                    nums = 0;
+                    input.next();
+                }
+            }while(nums != 5);
             stmt.close();
             conn.close();
         }catch(SQLException sqle1){
             System.out.println("SQLException: " + sqle1.getMessage());
-
         }
 
     }
