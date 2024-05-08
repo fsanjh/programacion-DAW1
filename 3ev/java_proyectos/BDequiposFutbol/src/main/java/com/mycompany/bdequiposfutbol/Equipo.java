@@ -29,23 +29,23 @@ public class Equipo{
     public Equipo(){}
     
     
-    public void crearEquipo(){
+    public String crearEquipo(){
         System.out.print("Escriba el nombre del equipo: ");
         this.nombre = input.next() + input.nextLine();
         do{
-            System.out.print("Escriba el código del equipo,\ndebe estar compuesto por 3 letras que lo identifiquen (FC Barcelona = FCB, Real Madrid = RMA): ");
-            this.codigo = input.next();
+            System.out.print("Escriba el código del equipo, deben ser 3 letras (FC Barcelona = FCB, Real Madrid = RMA): ");
+            this.codigo = input.next().toUpperCase();
             if(this.codigo.length() != 3){
                 System.out.println("Por favor, escriba correctamente el código del equipo");
             }
         }while(this.codigo.length() != 3);
-        System.out.print("Escriba el nombre de su estadio, en caso de no tener dejar la respuesta vacía: ");
+        System.out.print("Escriba el nombre de su estadio o 0 en caso de no tenerlo: ");
         this.estadio = input.next() + input.nextLine();
-        System.out.print("Escriba el nombre de su ciudad, en caso de no tener dejar la respuesta vacía: ");
+        System.out.print("Escriba el nombre de su ciudad: ");
         this.ciudad = input.next() + input.nextLine();
         try{
             do{
-                System.out.print("Escriba el número de socios, en caso de no tener dejar la respuesta vacía o 0: ");
+                System.out.print("Escriba el número de socios: ");
                 this.socios = input.nextInt();
                 if(this.socios < 0){
                     System.out.println("La cantidad de socios no puede ser negativa");
@@ -56,7 +56,7 @@ public class Equipo{
             this.socios = 0;
             input.next();
         }
-        System.out.println("Equipo creado con éxito");
+        return this.codigo;
     }
     
     public void mostrarEquipo(){
