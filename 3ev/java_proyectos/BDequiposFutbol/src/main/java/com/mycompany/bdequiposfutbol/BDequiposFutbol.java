@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class BDequiposFutbol{
 
-    public static boolean existeEquipo(Statement stmt, ResultSet result, String cod){
+    public static boolean existeEquipo(Statement stmt, ResultSet result, String cod){ //Comprueba si existe un equipo con el Codigo pasado
         try{
             result = stmt.executeQuery("SELECT codigo FROM futbol.equipos WHERE codigo = '" + cod + "';");
             return result.next();
@@ -27,7 +27,7 @@ public class BDequiposFutbol{
         return true;
     }
 
-    public static boolean existeJugador(Statement stmt, ResultSet result, int cod){
+    public static boolean existeJugador(Statement stmt, ResultSet result, int cod){ //Comprueba si existe un jugador con el Codigo pasado
         try{
             result = stmt.executeQuery("SELECT codigo FROM futbol.jugadores WHERE codigo = '" + cod + "';");
             return result.next();
@@ -37,7 +37,7 @@ public class BDequiposFutbol{
         return true;
     }
 
-    public static ArrayList actualizarEquipos(Statement stmt, ResultSet result){
+    public static ArrayList actualizarEquipos(Statement stmt, ResultSet result){ //Añade al ArrayList los equipos que se encuentran en la base de datos
         ArrayList<Equipo> equiposFinal = new ArrayList<>();
         try{
             result = stmt.executeQuery("SELECT * FROM futbol.equipos;");
@@ -51,7 +51,7 @@ public class BDequiposFutbol{
         return equiposFinal;
     }
 
-    public static ArrayList actualizarJugadores(Statement stmt, ResultSet result){
+    public static ArrayList actualizarJugadores(Statement stmt, ResultSet result){ //Añade al ArrayList los jugadores que se encuentran en la base de datos
         ArrayList<Jugador> jugadoresFinal = new ArrayList<>();
         try{
             result = stmt.executeQuery("SELECT * FROM futbol.jugadores;");
@@ -91,7 +91,7 @@ public class BDequiposFutbol{
                 switch(nums){
                     case 1 -> {
                         do{
-                            System.out.println("\nQué quiere hacer: ");
+                            System.out.println("\nQué quieres hacer: ");
                             System.out.println("    a- Mostrar equipos");
                             System.out.println("    b- Añadir equipo");
                             System.out.println("    c- Modificar equipo");
@@ -295,10 +295,10 @@ public class BDequiposFutbol{
                                     jugadorNuevo.crearJugador();
 
                                     jugadores.add(jugadorNuevo);
-                                    int codNuevo = 0;
+                                    int codNuevo = 1;
                                     do{
                                         codNuevo++;
-                                    }while(existeJugador(stmt, result, jugadorNuevo.getCodigo()));
+                                    }while(existeJugador(stmt, result, codNuevo));
                                     jugadorNuevo.setCodigo(codNuevo);
                                     colaQueries.add("INSERT INTO futbol.jugadores VALUES('" + jugadorNuevo.getCodigo() + "', '" + jugadorNuevo.getNombre() + "', '" + jugadorNuevo.getApellidos() + "',"
                                             + " '" + jugadorNuevo.getFechaNac() + "', '" + jugadorNuevo.getCodigoEquipo() + "');");
