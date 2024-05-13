@@ -1,6 +1,5 @@
 package com.mycompany.bdequiposfutbol;
 
-import java.sql.Date;
 import java.util.Scanner;
 
 /**
