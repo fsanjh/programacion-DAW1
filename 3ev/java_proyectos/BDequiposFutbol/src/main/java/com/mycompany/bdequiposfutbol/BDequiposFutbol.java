@@ -70,7 +70,7 @@ public class BDequiposFutbol{
         Queue<String> colaQueries = new LinkedList<>();
         int nums;
         String res;
-        boolean correcto = true;
+        boolean correcto;
         try{
             String url = "jdbc:mariadb://localhost:3307/futbol";
             Connection conn = DriverManager.getConnection(url, "root", "root");
@@ -109,7 +109,6 @@ public class BDequiposFutbol{
                                             equipos.get(i).mostrarEquipo();
                                         }
                                     }
-
                                 }
                                 case "b" -> {
                                     Equipo equipoNuevo = new Equipo();
@@ -297,7 +296,7 @@ public class BDequiposFutbol{
                                     jugadores.add(jugadorNuevo);
                                     int codNuevo = 1;
                                     do{
-                                        codNuevo++;
+                                        codNuevo ++;
                                     }while(existeJugador(stmt, result, codNuevo));
                                     jugadorNuevo.setCodigo(codNuevo);
                                     colaQueries.add("INSERT INTO futbol.jugadores VALUES('" + jugadorNuevo.getCodigo() + "', '" + jugadorNuevo.getNombre() + "', '" + jugadorNuevo.getApellidos() + "',"
