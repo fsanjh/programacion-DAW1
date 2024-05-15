@@ -10,19 +10,19 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="343.0" prefWidth="284.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxsumar.SumaController">
+<VBox alignment="CENTER" prefHeight="343.0" prefWidth="284.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxsumar.CalculadoraController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
       <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="186.0" text="Num1">
          <graphic>
-            <TextField fx:id="num1" nodeOrientation="LEFT_TO_RIGHT" />
+            <TextField fx:id="num1" />
          </graphic>
       </Label>
       <Label nodeOrientation="RIGHT_TO_LEFT" prefHeight="45.0" prefWidth="186.0" text="Num2">
          <graphic>
-            <TextField fx:id="num2" nodeOrientation="LEFT_TO_RIGHT" />
+            <TextField fx:id="num2" />
          </graphic>
          <VBox.margin>
             <Insets top="-25.0" />
@@ -45,6 +45,6 @@
          </children>
       </GridPane>
       <Button id="botonSuma" fx:id="btnOperar" mnemonicParsing="false" onAction="#operar" text="Calcular" />
-      <TextField fx:id="resultField" alignment="TOP_LEFT" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="61.0" prefWidth="161.0" promptText="Resultado..." />
+      <TextField fx:id="resultField" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Resultado..." />
    </children>
 </VBox>
