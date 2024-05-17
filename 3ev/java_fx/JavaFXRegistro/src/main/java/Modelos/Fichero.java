@@ -1,6 +1,7 @@
 package Modelos;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,6 +19,11 @@ public class Fichero{
         boolean res = true;
         boolean existe = false;
         try{
+            File file = new File(path + txtRegistro + ".txt");
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            
             FileReader fr = new FileReader(path + txtRegistro + ".txt");
             BufferedReader br = new BufferedReader(fr);
             String cuentaStr = cuenta.getNombre().trim() +" | "+ cuenta.getEmail().trim() +" | "+ cuenta.getPass().trim();
